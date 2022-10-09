@@ -5,7 +5,7 @@ import java.io.IOException;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
-
+//java -cp playground-0.0.1-SNAPSHOT.jar playground.training.GetMetaData
 public class GetMetaData {
 
 	public static void main(String[] args) throws IOException {
