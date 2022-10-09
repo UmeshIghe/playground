@@ -10,8 +10,9 @@ import com.squareup.okhttp.Response;
 public class GetMetaData {
 
 	public static void main(String[] args) throws IOException {
+		String meta = System.getProperty("meta");
 		OkHttpClient client = new OkHttpClient();
-		Request request = new Request.Builder().url("http://metadata.google.internal/computeMetadata/v1/instance/image")
+		Request request = new Request.Builder().url("http://metadata.google.internal/computeMetadata/v1/" + meta)
 				.method("GET", null).addHeader("Metadata-Flavor", "Google").build();
 		Response response = client.newCall(request).execute();
 		String body = response.body().string().strip();
