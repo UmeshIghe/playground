@@ -14,8 +14,8 @@ public class GetMetaData {
 		Request request = new Request.Builder().url("http://metadata.google.internal/computeMetadata/v1/instance/image")
 				.method("GET", null).addHeader("Metadata-Flavor", "Google").build();
 		Response response = client.newCall(request).execute();
-		int a = response.code();
-		System.out.println("Response Code is this" + a);
+		String body = response.body().toString();
+		System.out.println("Response Code is this" + body);
 
 	}
 
