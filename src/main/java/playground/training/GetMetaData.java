@@ -18,7 +18,7 @@ public class GetMetaData {
 		try {
 			response = client.newCall(request).execute();
 			String body = response.body().string().strip();
-			System.out.println("Response Code is this" + body);
+			System.out.println("Response is this -->" + body);
 		} catch (IOException e) {
 
 			System.out.println("Error occured while getting metadata" + e.getMessage());
